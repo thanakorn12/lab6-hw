@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            function addinfo() 
+            {
+                var nameInput = document.getElementById("NameTextinput");
+                var Name = nameInput.value;
+                alert("Adding " + Name);
+
+                var locationInput = document.getElementById("LocationTextinput");
+                var Location = locationInput.value;
+                alert("Adding " + Location);
+
+                var Phoneinput = document.getElementById("PhoneTextinput");
+                var Phone = Phoneinput.value;
+                alert("Adding " + Phone);
+
+                var td1 = document.createElement("td");
+                td1.innerHTML = Name ;
+
+                var td2 = document.createElement("td");
+                td2.innerHTML = Location ;
+
+                var td3 = document.createElement("td");
+                td3.innerHTML = Phone ;
+
+                var tr = document.createElement("tr")
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+
+                var table = document.getElementById("tableadd");
+                table.appendChild(tr);
+            }
+        </script>
+        <style>
+            table,th,tr,td{
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <label>ชื่อลูกค้า</label>
+            <input type="text" id="NameTextinput"><br>
+            <label>ที่อยู่</label>
+            <input type="text" id="LocationTextinput"><br>
+            <label>เบอร์โทร</label>
+            <input type="text" id="PhoneTextinput"><br>
+
+            <input type="button" id="addButton" value="เพิ่ม" onclick="addinfo()">
+        </form>
+        <table id="tableadd">
+            <tr>
+                <th>ชื่อลูกค้า
+                <th>ที่อยู่</th>
+                <th>โทรศัพท์</th>
+            </tr>
+
+        </table>
+    </body>
+</html>
