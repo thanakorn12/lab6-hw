@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function sum(){
+            var n1 = parseFloat(document.getElementById('t1').value)
+            var n2 = parseFloat(document.getElementById('t2').value)
+            var sum = document.getElementById("option").value
+            if(sum =='+'){
+                document.getElementById('t3').value= n1 + n2;
+            }else if(sum =='-'){
+                document.getElementById('t3').value= n1 - n2;
+            }else if(sum =='*'){
+                document.getElementById('t3').value= n1 * n2;
+            }else if(sum =='/'){
+                document.getElementById('t3').value= n1 / n2;
+            }
+        }
+    </script>
+</head>
+<body>
+    <p><input type="text" id="t1" name="t1"  size="5">
+        
+        <select id="option">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+    <input type="text" id="t2"name="t2" size="5" > =
+    <input type="text" id="t3"name="t3" size="5" >
+    <input type="button" id="button" value="com" onclick="sum()"></p>
+    
+</body>
+</html>
